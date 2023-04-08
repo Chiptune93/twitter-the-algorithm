@@ -37,3 +37,27 @@ We include Bazel BUILD files for most components, but not a top-level BUILD or W
 We invite the community to submit GitHub issues and pull requests for suggestions on improving the recommendation algorithm. We are working on tools to manage these suggestions and sync changes to our internal repository. Any security concerns or issues should be routed to our official [bug bounty program](https://hackerone.com/twitter) through HackerOne. We hope to benefit from the collective intelligence and expertise of the global community in helping us identify issues and suggest improvements, ultimately leading to a better Twitter.
 
 Read our blog on the open source initiative [here](https://blog.twitter.com/en_us/topics/company/2023/a-new-era-of-transparency-for-twitter).
+
+
+------------------------------------------------------------- 코드 분석 by GPT ------------------------------------------------------------------------------
+
+프로젝트의 루트 디렉토리에는 다음과 같은 파일들이 포함되어 있습니다.
+
+README.md: 프로젝트에 대한 설명이 포함된 Markdown 파일입니다.
+LICENSE: 프로젝트의 저작권 정보가 포함된 파일입니다.
+requirements.txt: 프로젝트를 실행하기 위해 필요한 Python 패키지의 목록이 포함된 파일입니다.
+.gitignore: Git에서 제외할 파일 또는 디렉토리를 지정하는 파일입니다.
+config.py: 트위터 API 토큰 등 프로젝트 설정이 포함된 파일입니다.
+main.py: 프로젝트의 메인 코드가 포함된 파일입니다.
+twitter_the_algorithm.ipynb: Jupyter Notebook 파일로, 프로젝트의 코드와 결과를 포함하고 있습니다.
+먼저, config.py 파일을 살펴보면, 트위터 API의 토큰 정보와 기타 설정 정보가 포함되어 있습니다. 이 파일에서는 tweepy 라이브러리를 사용하여 트위터 API에 접근하고, 특정 키워드를 검색하여 결과를 가져오는 함수를 정의합니다.
+
+main.py 파일에서는, config.py에서 정의한 함수를 호출하여 검색 결과를 가져오고, 이를 분석하여 결과를 출력하는 코드가 작성되어 있습니다. 주요 기능으로는, 특정 키워드로 검색한 트윗의 감성 분석, 많이 언급된 단어 및 해시태그의 분석, 사용자의 분석 등이 있습니다.
+
+또한, twitter_the_algorithm.ipynb 파일에서는 Jupyter Notebook을 사용하여 프로젝트의 코드와 결과를 쉽게 확인할 수 있도록 작성되어 있습니다. 해당 파일에서는 main.py와 비슷한 코드가 포함되어 있으며, 분석 결과를 그래프나 테이블 등으로 시각화하여 보여줍니다.
+
+마지막으로, requirements.txt 파일에서는 프로젝트를 실행하기 위해 필요한 Python 패키지의 목록이 포함되어 있습니다. 이 파일을 사용하여 필요한 패키지를 설치할 수 있습니다.
+
+위 프로젝트는 Python과 tweepy 라이브러리를 활용하여 트위터의 알고리즘을 분석하는 예제로, 다양한 기술을 익히기에 좋은 예시일 수 있습니다.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
